@@ -13,13 +13,14 @@ import javax.swing.JFrame;
  * @author Libardo, Julio
  */
 public class GUINewCompany extends javax.swing.JDialog {
+    private CompanyService companyService;
     /**
      * Creates new form GUINewCompany
      * @param parent
      */
-    public GUINewCompany(JFrame parent) {
+    public GUINewCompany(JFrame parent, CompanyService service) {
         super(parent, "Nueva Empresa", true); //true: modal
-        
+        this.companyService = service;
         
         initComponents();
         setSize(600,500);
@@ -142,18 +143,16 @@ public class GUINewCompany extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCloseActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        CompanyService serv = new CompanyService(new CompanySqliteRepository()); // TODO El repositorio esta quemado 
-        String nit = txtNit.getText().trim();
-        String name = txtName.getName().trim();
-        String phone = txtPhone.getName().trim();
-        String pageWeb = txtPageWeb.getName().trim();
-        String sectorStr = cboSector.getName().trim();
+        CompanyService serv = new CompanyService(new CompanySqliteRepository());  
+        String nit = txtNit.getText();
+        String name = txtName.getText();
+        String phone = txtPhone.getText();
+        String pageWeb = txtPageWeb.getText();
+        String email = txtEmail.getText();
+        String password = txtPassword.getText();
+        String sectorStr = (String)cboSector.getSelectedItem();
         Sector sector = Sector.valueOf(sectorStr);
-        String email = txtEmail.getName().trim();
-        String password = txtPassword.getName().trim();
-
-
-        serv.saveCompany(new Company(nit, name, phone, pageWeb, sector, email, password));
+        companyService.saveCompany(new Company(nit, name, phone, pageWeb, sector, email, password));
     }//GEN-LAST:event_btnSaveActionPerformed
 
 

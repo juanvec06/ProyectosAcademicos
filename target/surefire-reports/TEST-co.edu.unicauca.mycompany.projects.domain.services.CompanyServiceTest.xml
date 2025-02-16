@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="1.235" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\test-classes;C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\classes;C:\Users\spart\.m2\repository\org\xerial\sqlite-jdbc\3.32.3.2\sqlite-jdbc-3.32.3.2.jar;C:\Users\spart\.m2\repository\org\netbeans\external\AbsoluteLayout\RELEASE120\AbsoluteLayout-RELEASE120.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.3\junit-jupiter-api-5.6.3.jar;C:\Users\spart\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\spart\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-commons\1.6.3\junit-platform-commons-1.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.3\junit-jupiter-params-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.3\junit-jupiter-engine-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-engine\1.6.3\junit-platform-engine-1.6.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-core\5.5.0\mockito-core-5.5.0.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy\1.14.6\byte-buddy-1.14.6.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar;C:\Users\spart\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-junit-jupiter\5.5.0\mockito-junit-jupiter-5.5.0.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-inline\2.18.0\mockito-inline-2.18.0.jar;C:\Users\spart\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="user.country" value="MX"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\spart\AppData\Local\Temp\surefire1241904309537483247\surefirebooter-20250216075754424_3.jar C:\Users\spart\AppData\Local\Temp\surefire1241904309537483247 2025-02-16T07-57-54_090-jvmRun1 surefire-20250216075754424_1tmp surefire_0-20250216075754424_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\test-classes;C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\classes;C:\Users\spart\.m2\repository\org\xerial\sqlite-jdbc\3.32.3.2\sqlite-jdbc-3.32.3.2.jar;C:\Users\spart\.m2\repository\org\netbeans\external\AbsoluteLayout\RELEASE120\AbsoluteLayout-RELEASE120.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.3\junit-jupiter-api-5.6.3.jar;C:\Users\spart\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\spart\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-commons\1.6.3\junit-platform-commons-1.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.3\junit-jupiter-params-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.3\junit-jupiter-engine-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-engine\1.6.3\junit-platform-engine-1.6.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-core\5.5.0\mockito-core-5.5.0.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy\1.14.6\byte-buddy-1.14.6.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar;C:\Users\spart\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-junit-jupiter\5.5.0\mockito-junit-jupiter-5.5.0.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-inline\2.18.0\mockito-inline-2.18.0.jar;C:\Users\spart\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\spart"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\spart\AppData\Local\Temp\surefire1241904309537483247\surefirebooter-20250216075754424_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="spart"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-22\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\spart\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\spart\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\oracleXE\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Users\spart\AppData\Local\Programs\Python\Launcher\;C:\Users\spart\AppData\Local\Microsoft\WindowsApps;C:\Users\spart\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\spart\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testSaveCompany_Success" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="1.219"/>
+  <testcase name="testSaveCompany_Failure" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.005"/>
+  <testcase name="testGetAllCompanies" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.006"/>
+</testsuite>
