@@ -21,7 +21,7 @@ public class Main {
         
         // Hacia futuro el tipo de repositorio lo podemos leer de un archivo plano
         // setup.properties, asi no tendriamos que recompilar la aplicación
-        ICompanyRepository repository = Factory.getInstance().getRepository("ARRAYS");
+        ICompanyRepository repository = Factory.getInstance().getRepository("SQLITE");
         CompanyService service = new CompanyService(repository);
         
         GUIMenu instance = new GUIMenu(service);
