@@ -2,6 +2,7 @@ package co.edu.unicauca.mycompany.projects.access;
 
 import co.edu.unicauca.mycompany.projects.domain.entities.Company;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.List;
 
 /**
@@ -11,8 +12,8 @@ import java.util.List;
  */
 public class CompanySqliteRepository implements ICompanyRepository {
 
-    private Connection conn;
-
+    private static Connection con;
+    
     @Override
     public boolean save(Company newCompany) {
         throw new UnsupportedOperationException("Not supported yet.");

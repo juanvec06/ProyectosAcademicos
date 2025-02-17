@@ -23,80 +23,42 @@ public class CompanyService {
         return repository.listAll();
     }
     
-    public boolean saveCompany(Company newCompany ) {
-        //Verificar campos obligatorios
-        if(!(checkMandatoryCamp(newCompany.getNit(), "Debe agregar el Nit")
-        &&checkMandatoryCamp(newCompany.getName(), "Debe agregar el Nombre")
-        &&checkMandatoryCamp(newCompany.getSector().toString(), "Debe agregar el Sector")
-        &&checkMandatoryCamp(newCompany.getEmail(), "Debe agregar el Email")
-        &&checkMandatoryCamp(newCompany.getPassword(), "Debe agregar una contraseña")
-        )){
-            return false;
+    public String saveCompany(Company newCompany) {
+        // Verificar campos obligatorios
+        String errorMsg = checkMandatoryFields(newCompany);
+        if (errorMsg != null) return errorMsg;
+
+        // Verificar email válido
+        if (!checkValidEmail(newCompany.getEmail())) {
+            return "Ingrese un email válido.";
         }
-        //Veficar email valido
-        if(!(checkValidEmail(newCompany.getEmail()))){
-            return false;
+
+        // Verificar contraseña válida
+        if (!checkPassword(newCompany.getPassword())) {
+            return "La contraseña debe tener al menos 6 caracteres, una mayúscula y un carácter especial.";
         }
-        //Verificar contraseña valida
-        if(!(chechPassword(newCompany.getPassword()))){
-            return false;
-        }
-        return repository.save(newCompany);
+
+        // Guardar en el repositorio si pasa todas las validaciones
+        boolean saved = repository.save(newCompany);
+        return saved ? null : "Error al guardar la empresa.";
     }
-    /**
-     * Verifica los campos obligatorios
-     * @param camp campo a verificar
-     * @param warningMessage mensaje en caso de que e campo este vacio
-     * @return true si el campo no esta vacio, false si lo esta
-     */
-    private boolean checkMandatoryCamp(String camp, String warningMessage)
-    {
-        if (camp.equals("")){
-            //Se utiliza front para mostrar errores en una clase que es de back, revisar esto
-            Messages.showMessageDialog(warningMessage,"Atención");
-            //txtNit.requestFocus();
-            return false;
-        }
-        return true;
+    private String checkMandatoryFields(Company company) {
+        if (company.getNit().isEmpty()) return "Debe agregar el Nit.";
+        if (company.getName().isEmpty()) return "Debe agregar el Nombre.";
+        if (company.getSector() == null) return "Debe agregar el Sector.";
+        if (company.getEmail().isEmpty()) return "Debe agregar el Email.";
+        if (company.getPassword().isEmpty()) return "Debe agregar una contraseña.";
+        return null; // Todo está bien
     }
-    /**
-     * Veriica que el email sea valido con una expresion regular siguiento el estandar RFC 5322
-     * @param email la cadena del email que vamos a validar
-     * @return true si es valido, false si no lo es
-     */
-    private boolean checkValidEmail(String email){
-        String emailRegex = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        Pattern pattern = Pattern.compile(emailRegex);
-        Matcher matcher = pattern.matcher(email);
-        if(!(matcher.matches())){
-            Messages.showMessageDialog("Ingrese un email valido","Atención");
-            return false;
-        }
-        return true;
+
+    private boolean checkValidEmail(String email) {
+        String emailRegex = "^[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,}$";
+        return email.matches(emailRegex);
     }
-    /**
-     * verifica si una contraseña es valida, que tenga mas de 6 caracteres, al menos una mayuscula y un caracter especial
-     * @param password la contraseña a validar
-     * @return true si la contraseña es valida, false si no lo es
-     */
-    private boolean chechPassword(String password) {
-        if(password.length() < 6 || !(containsMayus(password)) || !(password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\",.<>?/\\\\].*"))){
-            Messages.showMessageDialog("La contraseña debe tener al menos 6 caracteres, una mayuscula y un caracter especial","Atención");
-            return false;
-        }
-        return true;
-    }
-    /**
-     * verifica si un string contiene al menos una mayuscula
-     * @param str el string a verificar
-     * @return true si contiene una mayuscula, false si no
-     */
-    private boolean containsMayus(String str){
-        for (int i=0; i<str.length(); i++){
-            if(java.lang.Character.isUpperCase(str.charAt(i))){
-                return true;
-            }
-        }
-        return false;
+
+    private boolean checkPassword(String password) {
+        return password.length() >= 6 &&
+               password.matches(".*[A-Z].*") &&
+               password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\",.<>?/\\\\].*");
     }
 }

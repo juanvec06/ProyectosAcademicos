@@ -149,14 +149,18 @@ public class GUINewCompany extends javax.swing.JDialog {
         String pageWeb = txtPageWeb.getText();
         String email = txtEmail.getText();
         String password = txtPassword.getText();
-        String sectorStr = (String)cboSector.getSelectedItem();
+        String sectorStr = (String) cboSector.getSelectedItem();
         Sector sector = Sector.valueOf(sectorStr);
-        if(companyService.saveCompany(new Company(nit, name, phone, pageWeb, sector, email, password))){
-            Messages.showMessageDialog("La empresa se registro exitosamente","Atención");
-            this.dispose();
-            
-        }
 
+        Company newCompany = new Company(nit, name, phone, pageWeb, sector, email, password);
+        String validationMessage = companyService.saveCompany(newCompany);
+
+        if (validationMessage == null) {
+            Messages.showMessageDialog("La empresa se registró exitosamente", "Atención");
+            this.dispose();
+        } else {
+            Messages.showMessageDialog(validationMessage, "Atención");
+        }
     }//GEN-LAST:event_btnSaveActionPerformed
 
 

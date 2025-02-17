@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="7.306" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="1.495" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
     <property name="java.class.path" value="C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\test-classes;C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\classes;C:\Users\spart\.m2\repository\org\xerial\sqlite-jdbc\3.32.3.2\sqlite-jdbc-3.32.3.2.jar;C:\Users\spart\.m2\repository\org\netbeans\external\AbsoluteLayout\RELEASE120\AbsoluteLayout-RELEASE120.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.3\junit-jupiter-api-5.6.3.jar;C:\Users\spart\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\spart\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-commons\1.6.3\junit-platform-commons-1.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.3\junit-jupiter-params-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.3\junit-jupiter-engine-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-engine\1.6.3\junit-platform-engine-1.6.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-core\5.5.0\mockito-core-5.5.0.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy\1.14.6\byte-buddy-1.14.6.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar;C:\Users\spart\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-junit-jupiter\5.5.0\mockito-junit-jupiter-5.5.0.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-inline\2.18.0\mockito-inline-2.18.0.jar;C:\Users\spart\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
@@ -16,9 +15,8 @@
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\spart\AppData\Local\Temp\surefire1833241054530992495\surefirebooter-20250216223027445_3.jar C:\Users\spart\AppData\Local\Temp\surefire1833241054530992495 2025-02-16T22-30-27_268-jvmRun1 surefire-20250216223027445_1tmp surefire_0-20250216223027445_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\spart\AppData\Local\Temp\surefire11470163247903411152\surefirebooter-20250217000847806_3.jar C:\Users\spart\AppData\Local\Temp\surefire11470163247903411152 2025-02-17T00-08-47_539-jvmRun1 surefire-20250217000847806_1tmp surefire_0-20250217000847806_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest"/>
     <property name="surefire.test.class.path" value="C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\test-classes;C:\Users\spart\OneDrive\Documentos\6 semestre\Soft2\AcademicProjects\AcademicProjects\target\classes;C:\Users\spart\.m2\repository\org\xerial\sqlite-jdbc\3.32.3.2\sqlite-jdbc-3.32.3.2.jar;C:\Users\spart\.m2\repository\org\netbeans\external\AbsoluteLayout\RELEASE120\AbsoluteLayout-RELEASE120.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.3\junit-jupiter-api-5.6.3.jar;C:\Users\spart\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\spart\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-commons\1.6.3\junit-platform-commons-1.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.3\junit-jupiter-params-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.3\junit-jupiter-engine-5.6.3.jar;C:\Users\spart\.m2\repository\org\junit\platform\junit-platform-engine\1.6.3\junit-platform-engine-1.6.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-core\5.5.0\mockito-core-5.5.0.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy\1.14.6\byte-buddy-1.14.6.jar;C:\Users\spart\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar;C:\Users\spart\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-junit-jupiter\5.5.0\mockito-junit-jupiter-5.5.0.jar;C:\Users\spart\.m2\repository\org\mockito\mockito-inline\2.18.0\mockito-inline-2.18.0.jar;C:\Users\spart\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\spart"/>
@@ -32,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\spart\AppData\Local\Temp\surefire1833241054530992495\surefirebooter-20250216223027445_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\spart\AppData\Local\Temp\surefire11470163247903411152\surefirebooter-20250217000847806_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -59,18 +57,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCheckNIT" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="2.948"/>
-  <testcase name="testShortPassword" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.297"/>
-  <testcase name="testPasswordWithoutMayus" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.365"/>
-  <testcase name="testCheckEmail" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.401"/>
-  <testcase name="testValidEmail_ValidPassword" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.032"/>
-  <testcase name="testEmailWithSpecialChar" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.466"/>
-  <testcase name="testSaveCompany_Success" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.015"/>
-  <testcase name="testCheckNombre" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.442"/>
-  <testcase name="testShortWithoutSpecialChar" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.66"/>
-  <testcase name="testEmailWithoutAt" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.578"/>
+  <testcase name="testCheckNIT" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="1.381"/>
+  <testcase name="testShortPassword" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.005"/>
+  <testcase name="testPasswordWithoutMayus" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.005"/>
+  <testcase name="testPasswordWithoutSpecialChar" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.004"/>
+  <testcase name="testCheckEmail" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.003"/>
+  <testcase name="testValidEmail_ValidPassword" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.054"/>
+  <testcase name="testEmailWithSpecialChar" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.003"/>
+  <testcase name="testSaveCompany_Success" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.004"/>
+  <testcase name="testCheckNombre" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.003"/>
+  <testcase name="testEmailWithoutAt" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.001"/>
   <testcase name="testSaveCompany_Failure" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.003"/>
-  <testcase name="testEmailWithoutDomain" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.556"/>
-  <testcase name="testGetAllCompanies" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.006"/>
-  <testcase name="testCheckPassword" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.494"/>
+  <testcase name="testEmailWithoutDomain" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.003"/>
+  <testcase name="testGetAllCompanies" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.004"/>
+  <testcase name="testCheckPassword" classname="co.edu.unicauca.mycompany.projects.domain.services.CompanyServiceTest" time="0.002"/>
 </testsuite>

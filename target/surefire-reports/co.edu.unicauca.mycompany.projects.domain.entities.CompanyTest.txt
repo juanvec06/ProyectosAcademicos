@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: co.edu.unicauca.mycompany.projects.domain.entities.CompanyTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s -- in co.edu.unicauca.mycompany.projects.domain.entities.CompanyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.171 s -- in co.edu.unicauca.mycompany.projects.domain.entities.CompanyTest
