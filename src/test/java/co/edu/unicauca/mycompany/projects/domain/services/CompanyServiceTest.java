@@ -32,7 +32,74 @@ public class CompanyServiceTest {
         MockitoAnnotations.openMocks(this); // IMPORTANTE: Inicializa los mocks
         companyService = new CompanyService(repositoryMock); // Inyección del mock
     }
-
+    @Test
+    void testCheckNIT(){
+        boolean result = companyService.saveCompany(new Company("", "Empresa A","3434343", "www.mipagina1.com", Sector.SERVICES, "gerente1@gmail.com", "Password*"));
+        assertNotNull(result);
+        assertFalse(result);
+    }
+    @Test
+    void testCheckNombre(){
+        boolean result = companyService.saveCompany(new Company("123456", "","3434343", "www.mipagina1.com", Sector.SERVICES, "gerente1@gmail.com", "Password*"));
+        assertNotNull(result);
+        assertFalse(result);
+    }    
+    @Test
+    void testCheckEmail(){
+        boolean result = companyService.saveCompany(new Company("123456", "Empresa A","3434343", "www.mipagina1.com", Sector.SERVICES, "", "Password*"));
+        assertNotNull(result);
+        assertFalse(result);
+    }  
+    @Test
+    void testCheckPassword(){
+        boolean result = companyService.saveCompany(new Company("123456", "Empresa A","3434343", "www.mipagina1.com", Sector.SERVICES, "gerente1@gmail.com", ""));
+        assertNotNull(result);
+        assertFalse(result);
+    }  
+    @Test
+    void testEmailWithoutAt(){
+        boolean result = companyService.saveCompany(new Company("123455", "Empresa X", "3434343","www.mipagina1.com", Sector.SERVICES, "gerente1gmail.com", "Password*"));
+        assertNotNull(result);
+        assertFalse(result);
+    }
+    @Test
+    void testEmailWithoutDomain(){
+        boolean result = companyService.saveCompany(new Company("123455", "Empresa X", "3434343","www.mipagina1.com", Sector.SERVICES, "gerente1@", "Password*"));
+        assertNotNull(result);
+        assertFalse(result);
+    }
+    @Test
+    void testEmailWithSpecialChar(){
+        boolean result = companyService.saveCompany(new Company("123455", "Empresa X", "3434343","www.mipagina1.com", Sector.SERVICES, "geren%$te1@gmail.com", "Password*"));
+        assertNotNull(result);
+        assertFalse(result);
+    }
+    @Test
+    void testValidEmail_ValidPassword(){
+        Company newCompany = new Company("123455", "Empresa X", "3434343","www.mipagina1.com", Sector.SERVICES, "gerente1@gmail.com", "Password*");
+        when(repositoryMock.save(newCompany)).thenReturn(true); // Simula éxito, despues de la validacion de Email sigue el save del repositorio lo cual no nos interesa para esta prueba
+        boolean result = companyService.saveCompany(newCompany);
+        assertNotNull(result);
+        assertTrue(result); 
+    }
+    @Test
+    void testShortPassword(){
+        boolean result = companyService.saveCompany(new Company("123456", "Empresa A","3434343", "www.mipagina1.com", Sector.SERVICES, "gerente1@gmail.com", "123"));
+        assertNotNull(result);
+        assertFalse(result);
+    }
+    @Test
+    void testPasswordWithoutMayus(){
+        boolean result = companyService.saveCompany(new Company("123456", "Empresa A","3434343", "www.mipagina1.com", Sector.SERVICES, "gerente1@gmail.com", "contrasenia*"));
+        assertNotNull(result);
+        assertFalse(result);
+    }
+    @Test
+    void testShortWithoutSpecialChar(){
+        boolean result = companyService.saveCompany(new Company("123456", "Empresa A","3434343", "www.mipagina1.com", Sector.SERVICES, "gerente1@gmail.com", "Contrasenia"));
+        assertNotNull(result);
+        assertFalse(result);
+    }
     @Test
     void testGetAllCompanies() {
         // Simulación de datos
@@ -61,7 +128,7 @@ public class CompanyServiceTest {
 
     @Test
     void testSaveCompany_Success() {
-        Company newCompany = new Company("123459", "Empresa D","3434345", "www.mipagina4.com", Sector.SERVICES, "gerente4@gmail.com", "123");
+        Company newCompany = new Company("123459", "Empresa D","3434345", "www.mipagina4.com", Sector.SERVICES, "gerente4@gmail.com", "Password*");
 
         when(repositoryMock.save(newCompany)).thenReturn(true); // Simula éxito
 
@@ -73,7 +140,7 @@ public class CompanyServiceTest {
 
     @Test
     void testSaveCompany_Failure() {
-        Company newCompany = new Company("123459", "Empresa D","3434345", "www.mipagina4.com", Sector.SERVICES, "gerente4@gmail.com", "123");
+        Company newCompany = new Company("123459", "Empresa D","3434345", "www.mipagina4.com", Sector.SERVICES, "gerente4@gmail.com", "Password*");
 
         when(repositoryMock.save(newCompany)).thenReturn(false); // Simula fallo
 

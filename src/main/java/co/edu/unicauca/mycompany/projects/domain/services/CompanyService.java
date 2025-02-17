@@ -43,6 +43,12 @@ public class CompanyService {
         }
         return repository.save(newCompany);
     }
+    /**
+     * Verifica los campos obligatorios
+     * @param camp campo a verificar
+     * @param warningMessage mensaje en caso de que e campo este vacio
+     * @return true si el campo no esta vacio, false si lo esta
+     */
     private boolean checkMandatoryCamp(String camp, String warningMessage)
     {
         if (camp.equals("")){
@@ -53,6 +59,11 @@ public class CompanyService {
         }
         return true;
     }
+    /**
+     * Veriica que el email sea valido con una expresion regular siguiento el estandar RFC 5322
+     * @param email la cadena del email que vamos a validar
+     * @return true si es valido, false si no lo es
+     */
     private boolean checkValidEmail(String email){
         String emailRegex = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
         Pattern pattern = Pattern.compile(emailRegex);

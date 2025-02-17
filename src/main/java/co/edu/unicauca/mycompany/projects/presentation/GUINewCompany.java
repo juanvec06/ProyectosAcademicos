@@ -143,7 +143,6 @@ public class GUINewCompany extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCloseActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        CompanyService serv = new CompanyService(new CompanySqliteRepository());  
         String nit = txtNit.getText();
         String name = txtName.getText();
         String phone = txtPhone.getText();
@@ -152,7 +151,12 @@ public class GUINewCompany extends javax.swing.JDialog {
         String password = txtPassword.getText();
         String sectorStr = (String)cboSector.getSelectedItem();
         Sector sector = Sector.valueOf(sectorStr);
-        companyService.saveCompany(new Company(nit, name, phone, pageWeb, sector, email, password));
+        if(companyService.saveCompany(new Company(nit, name, phone, pageWeb, sector, email, password))){
+            Messages.showMessageDialog("La empresa se registro exitosamente","Atención");
+            this.dispose();
+            
+        }
+
     }//GEN-LAST:event_btnSaveActionPerformed
 
 

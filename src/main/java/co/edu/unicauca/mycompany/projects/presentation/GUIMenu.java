@@ -147,7 +147,7 @@ public class GUIMenu extends javax.swing.JFrame {
     private void btnNewCompanyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewCompanyActionPerformed
         GUINewCompany instance = new GUINewCompany(null,companyService);
         instance.setVisible(true);
-
+        fillCompanies();
     }//GEN-LAST:event_btnNewCompanyActionPerformed
 
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
