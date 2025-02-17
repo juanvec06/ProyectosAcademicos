@@ -7,9 +7,13 @@ co\edu\unicauca\mycompany\projects\access\Factory.class
 co\edu\unicauca\mycompany\projects\domain\entities\Sector.class
 co\edu\unicauca\mycompany\projects\presentation\GUINewCompany.class
 co\edu\unicauca\mycompany\projects\infra\Messages.class
+co\edu\unicauca\mycompany\projects\presentation\GUIPrueba$1.class
+co\edu\unicauca\mycompany\projects\presentation\GUIPrueba.class
 co\edu\unicauca\mycompany\projects\presentation\GUIMenu$2.class
 co\edu\unicauca\mycompany\projects\presentation\GUIMenu.class
+co\edu\unicauca\mycompany\projects\presentation\GUIPrueba$3.class
 co\edu\unicauca\mycompany\projects\access\CompanySqliteRepository.class
 co\edu\unicauca\mycompany\projects\access\CompanyArraysRepository.class
+co\edu\unicauca\mycompany\projects\presentation\GUIPrueba$2.class
 co\edu\unicauca\mycompany\projects\access\ICompanyRepository.class
 co\edu\unicauca\mycompany\projects\presentation\GUINewCompany$1.class
